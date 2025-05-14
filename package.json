@@ -1,0 +1,20 @@
+{
+  "name": "cse341-project1",
+  "version": "1.0.0",
+  "description": "My First Project",
+  "homepage": "https://github.com/ArmorBoyd/cse341-project1#readme",
+  "bugs": {
+    "url": "https://github.com/ArmorBoyd/cse341-project1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmorBoyd/cse341-project1.git"
+  },
+  "license": "ISC",
+  "author": "Boyd Poblete",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
