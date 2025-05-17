@@ -7,28 +7,27 @@ let contacts;
 
 const initDb = (callback) => {
     if (contacts) {
-        console.log('Db is laready intialized');
+        console.log('Db is already initialized');
         return callback(null, contacts);
     }
     MongoClient.connect(process.env.MONGODB_URL)
         .then((client) => {
             contacts = client;
-            callback(null, contacts)
+            callback(null, contacts);
         })
         .catch((err) => {
             callback(err);
         });
 };
 
-
 const getDatabase = () => {
     if (!contacts) {
         throw Error('Database not initialized');
     }
-    return contacts
+    return contacts;
 };
 
 module.exports = {
-    intDb,
+    initDb,
     getDatabase
 };
