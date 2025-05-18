@@ -4,4 +4,8 @@ GET http://localhost:3000/users
 
 GET http://localhost:3000/users/6825f0f2ee3909e63153bce9
 
+GET http://localhost:3000/users/6825f141ee3909e63153bcea
+
+GET http://localhost:3000/users/6825f165ee3909e63153bceb
+
 GET https://cse341-project1-jclr.onrender.com/
