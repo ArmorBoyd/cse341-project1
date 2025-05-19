@@ -22,7 +22,7 @@ const getSingle = async (req, res) => {
 }
 
 const createUser = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+    
     const user = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -30,7 +30,7 @@ const createUser = async (req, res) => {
         favoriteColor: req.body.favoriteColor,
         birthday: req/body.birthday
     };
-    const response = await mongodb.getDatabase().db().collection('users').replaceOne({_id: userId}, user);
+    const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
