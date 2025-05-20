@@ -27,9 +27,9 @@ const createUser = async (req, res) => {
         lastName: req.body.lastName,
         email: req.body.email,
         favoriteColor: req.body.favoriteColor,
-        birthday: req/body.birthday
+        birthday: req.body.birthday
     };
-    const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
+    const response = await mongodb.getDatabase().db().collection('Contacts').insertOne(user);
     if (response.acknowledged) {
         res.status(204).send();
     } else {
@@ -40,22 +40,23 @@ const createUser = async (req, res) => {
 const updateUser = async (req, res) => {
     const userId = new ObjectId(req.params.id);
     const user = {
-        username: req.body.username,
-        email: req.body.email,
-        name: req.body.name,
-        ipaddress: req.body.ipaddress
+        "firstName": req.body.firstName,
+        "lastName": req.body.lastName,
+        "email": req.body.email,
+        "favoriteColor": req.body.favoriteColor,
+        "birtday": req.body.birthday
     };
-    const response = await mongodb.getDatabase().db().collection('users').replaceOne({ _id: userId }, user);
-        if (response.modifiedCount > 0) {
-            res.status(204).send();
-        } else {
-            res.status(500).json(response.error || 'Some error occurred whilte updating the user.');
-        }
+    const response = await mongodb.getDatabase().db().collection('Contacts').replaceOne({ _id: userId }, user);
+    if (response.modifiedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occurred whilte updating the user.');
+    }
 }
 
-const deleteUser = async(req, res) => {
+const deleteUser = async (req, res) => {
     const userId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection('users').deleteOne({ _id: userId });
+    const response = await mongodb.getDatabase().db().collection('Contacts').deleteOne({ _id: userId });
     if (response.deletedCount > 0) {
         res.status(204).send();
     } else {
