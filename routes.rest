@@ -9,11 +9,12 @@ GET http://localhost:3000/users/6825f141ee3909e63153bcea
 GET http://localhost:3000/users/6825f165ee3909e63153bceb
 ###
 GET https://cse341-project1-knyc.onrender.com
-
+###
+GET https://cse341-project1-knyc.onrender.com/users
 
 
 ### // The following request will CREATE a new user in the database
-POST http://localhost:3000/users HTTP/1.1
+POST https://cse341-project1-knyc.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
@@ -25,7 +26,7 @@ content-type: application/json
 }
 
 ### // The following request will UPDATE a user in the database
-PUT http://localhost:3000/users/6825f0f2ee3909e63153bce9 HTTP/1.1
+PUT https://cse341-project1-knyc.onrender.com/users/6825f0f2ee3909e63153bce9 HTTP/1.1
 content-type: application/json
 
 {
@@ -36,5 +37,5 @@ content-type: application/json
     "birthday": "1999-06-28"
 }
 ### // The following request will DELETE a user in the database
-DELETE http://localhost:3000/users/682c8cd660c010b6b37eb09f HTTP/1.1
+DELETE https://cse341-project1-knyc.onrender.com/users/682c8cd660c010b6b37eb09f HTTP/1.1
 
