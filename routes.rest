@@ -18,9 +18,9 @@ POST https://cse341-project1-knyc.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Kariza",
+    "firstName": "Gemz",
     "lastName": "Balacano",
-    "email": "kariza@gmail.com",
+    "email": "gemz@gmail.com",
     "favoriteColor": "red",
     "birthday": "1999-06-28"
 }
@@ -37,5 +37,5 @@ content-type: application/json
     "birthday": "1999-06-28"
 }
 ### // The following request will DELETE a user in the database
-DELETE https://cse341-project1-knyc.onrender.com/users/682c8cd660c010b6b37eb09f HTTP/1.1
+DELETE https://cse341-project1-knyc.onrender.com/users/682c8e8d60c010b6b37eb0a0 HTTP/1.1
 
