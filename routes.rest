@@ -14,19 +14,19 @@ GET https://cse341-project1-knyc.onrender.com/users
 
 
 ### // The following request will CREATE a new user in the database
-POST https://cse341-project1-knyc.onrender.com/users HTTP/1.1
+POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Gemz",
+    "firstName": "Ernie Ritz",
     "lastName": "Balacano",
-    "email": "gemz@gmail.com",
+    "email": "kariza@gmail.com",
     "favoriteColor": "red",
     "birthday": "1999-06-28"
 }
 
 ### // The following request will UPDATE a user in the database
-PUT https://cse341-project1-knyc.onrender.com/users/6825f0f2ee3909e63153bce9 HTTP/1.1
+PUT http://localhost:3000/users/6825f0f2ee3909e63153bce9 HTTP/1.1
 content-type: application/json
 
 {
@@ -37,5 +37,5 @@ content-type: application/json
     "birthday": "1999-06-28"
 }
 ### // The following request will DELETE a user in the database
-DELETE https://cse341-project1-knyc.onrender.com/users/682c8e8d60c010b6b37eb0a0 HTTP/1.1
+DELETE http://localhost:3000/users/682c934d60c010b6b37eb0a1 HTTP/1.1
 
